@@ -692,6 +692,15 @@ Patch639: netfilter-nf_nat_redirect-add-missing-NULL-pointer-c.patch
 #rhbz 1300955
 Patch640: PNP-Add-Haswell-ULT-to-Intel-MCH-size-workaround.patch
 
+#Patch for bay trail SDIO hang
+Patch700: 0001-PM-QoS-Add-pm_qos_cancel_request_lazy-that-doesn-t-s.patch
+patch701: 0001-mmc-sdhci-get-runtime-pm-when-sdio-irq-is-enabled.patch
+patch702: 0002-mmc-sdhci-Support-maximum-DMA-latency-request-via-PM.patch
+patch703: 0003-mmc-sdhci-acpi-Fix-device-hang-on-Intel-BayTrail.patch
+patch704: 0004a-mmc-sdhci-pci-Fix-device-hang-on-Intel-BayTrail.patch
+patch705: 0004b-mmc-sdhci-pci-Fix-device-hang-on-Intel-BayTrail.patch
+
+
 # END OF PATCH DEFINITIONS
 
 %endif
@@ -2135,7 +2144,10 @@ fi
 #
 # 
 %changelog
-* Mon Jan 25 2016 Josh Boyer <jwboyer@fedoraproject.org> - 4.3.4-300
+* Mon Jan 25 2016 Maël Lavault <mael.lavault@mailz.org> - 4.3.4-300
+- Add baytrail SDIO patches to fix hang
+
+* Mon Jan 25 2016 Josh Boyer <jwboyer@fedoraproject.org>
 - Add patch to fix some Elan touchpads (rhbz 1296677)
 
 * Sat Jan 23 2016 Josh Boyer <jwboyer@fedoraproject.org>
